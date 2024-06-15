@@ -1,9 +1,9 @@
 package DesignPattern.Builder.Solucao;
-
 import java.time.LocalDate;
 
 import DesignPattern.Builder.Pessoa;
 
+@SuppressWarnings("unused")
 public class PessoaBuilder {
     private String nome;
     private String sobrenome;

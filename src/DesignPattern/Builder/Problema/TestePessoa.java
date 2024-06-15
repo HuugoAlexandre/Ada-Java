@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import DesignPattern.Builder.Pessoa;
 
+@SuppressWarnings("unused")
 public class TestePessoa {
     public static void main(String[] args) {
         // Não consegue mais construir objeto com new

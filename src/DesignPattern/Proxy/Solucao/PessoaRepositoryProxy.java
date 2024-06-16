@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 import DesignPattern.Builder.Pessoa;
 import DesignPattern.Proxy.PessoaRepository;
 
-public class PessoaRepositoryProxy extends PessoaRepository {
+public class PessoaRepositoryProxy extends PessoaRepository implements ProxyPessoa {
     // Supondo que por algum motivo não devemos modificar PessoaRepository e queremos logs.
     // Cria-se uma nova classe que herda dela.
     private static Logger log = Logger.getLogger(PessoaRepositoryProxy.class.getName());

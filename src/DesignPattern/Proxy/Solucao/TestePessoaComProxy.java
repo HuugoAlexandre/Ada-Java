@@ -7,7 +7,10 @@ import DesignPattern.Proxy.PessoaService;
 public class TestePessoaComProxy {
     public static void main(String[] args) {
         PessoaRepositoryProxy pessoaRepositoryProxy = new PessoaRepositoryProxy();
-        PessoaService pessoaService = new PessoaService(pessoaRepositoryProxy);
+        // Tentar passar outro proxy dá erro, pois PessoaService espera receber o proxy definido
+        // Para resolver isso, utiliza-se interface (polimorfismo)
+        NovoPessoaRepositoryProxy novoPessoaRepositoryProxy = new NovoPessoaRepositoryProxy();
+        PessoaService pessoaService = new PessoaService(novoPessoaRepositoryProxy);
 
         Pessoa pessoa = new Pessoa.PessoaBuilder()
         .sobrenome("Alexandre")

@@ -1,16 +1,16 @@
 package DesignPattern.Proxy;
 
 import DesignPattern.Builder.Pessoa;
-import DesignPattern.Proxy.Solucao.PessoaRepositoryProxy;
+import DesignPattern.Proxy.Solucao.ProxyPessoa;
 
 public class PessoaService {
-    private PessoaRepositoryProxy pessoaRepositoryProxy;
+    private ProxyPessoa proxyPessoa;
 
-    public PessoaService(PessoaRepositoryProxy PessoaRepositoryProxy) {
-        this.pessoaRepositoryProxy = PessoaRepositoryProxy;
+    public PessoaService(ProxyPessoa proxyPessoa) {
+        this.proxyPessoa = proxyPessoa;
     } 
 
-    public void save(Pessoa pessoa) {pessoaRepositoryProxy.save(pessoa);}
+    public void save(Pessoa pessoa) {proxyPessoa.save(pessoa);}
 
-    public Pessoa findById(Long id) {return pessoaRepositoryProxy.findById(id);}
+    public Pessoa findById(Long id) {return proxyPessoa.findById(id);}
 }

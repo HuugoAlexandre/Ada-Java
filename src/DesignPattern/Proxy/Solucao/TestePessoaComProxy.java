@@ -21,6 +21,10 @@ public class TestePessoaComProxy {
 
         Pessoa pessoaRetornada = pessoaService.findById(1L);
         System.out.println(pessoaRetornada);
+
+        // A segunda chamada vai ser mais rápida por estar em cache
+        Pessoa pessoaRetornadaCache = pessoaService.findById(1L);
+        System.out.println(pessoaRetornadaCache);
     }
 }
     

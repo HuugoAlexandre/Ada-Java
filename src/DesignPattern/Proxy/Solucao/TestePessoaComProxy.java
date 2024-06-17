@@ -6,6 +6,7 @@ import DesignPattern.Proxy.PessoaService;
 
 public class TestePessoaComProxy {
     public static void main(String[] args) {
+        @SuppressWarnings("unused")
         PessoaRepositoryProxy pessoaRepositoryProxy = new PessoaRepositoryProxy();
         // Tentar passar outro proxy dá erro, pois PessoaService espera receber o proxy definido
         // Para resolver isso, utiliza-se interface (polimorfismo)

@@ -1,4 +1,4 @@
-package Examples;
+package DataStructure.Examples;
 
 public class QueueArray {
     private int[] queueArray;
